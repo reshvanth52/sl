@@ -35,6 +35,7 @@ minikube dashboard
 
 ## DEPLOYING APPLICATION ON MINIKUBE
 
+do this 1st:kubectl delete service mynginx
 Step 1: Create deployment
 kubectl create deployment mynginx --image=nginx
 
@@ -42,6 +43,7 @@ Check deployment
 kubectl get deployments
 kubectl get pods
 kubectl describe pods
+
 
 Step 2: Expose deployment
 kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
